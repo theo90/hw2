@@ -9,7 +9,7 @@ using namespace std;
  	double x; 
  	int Nskip = 100; //Number of iterations to skip 
  	int Nend  = 200; //Number of total iterations 
-	double arr_x[100];
+	double arr_x[100]; //array-größe Nend-Nskip
 
 	ofstream out("output.dat");
 	
