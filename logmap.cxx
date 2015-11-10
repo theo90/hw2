@@ -8,8 +8,9 @@ using namespace std;
  	double x0 = 0.5; 
  	double x; 
  	int Nskip = 100; //Number of iterations to skip 
- 	int Nend  = 200; //Number of total iterations 
-	double arr_x[100]; //array-größe Nend-Nskip
+ 	int Nend  = 200; //Number of total iterations
+ 	int m=Nend-Nskip;
+	double arr_x[m]; //array-größe Nend-Nskip
 
 	ofstream out("output.dat");
 	
@@ -24,7 +25,7 @@ using namespace std;
  	   		   x = r*x*(1-x); 
 			   arr_x[i-(Nskip+1)]=x;
  	   } 
-	   for(int j=0; j<100; j++)
+	   for(int j=0; j<m; j++)
 		  out<<r<<"\t"<<arr_x[j]<<endl;
 	   
  	} 
